@@ -1,0 +1,29 @@
+<wm-page data-ng-controller="MainPageController" name="mainpage">
+    <wm-left-panel content="leftnav" columnwidth="2" name="left_panel1"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1" title="Camera Widget" leftnavpaneliconclass="wi wi-menu" backbutton="false">
+        <wm-anchor caption="" name="AddLink" iconclass="wi wi-plus"></wm-anchor>
+    </wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content columnwidth="12" name="page_content1">
+            <wm-segmented-control name="segmented_control1">
+                <wm-segment-content name="segment_content1" caption="Image">
+                    <wm-container horizontalalign="center" marginbottom="10" margintop="10" name="container2">
+                        <wm-camera name="camera1"></wm-camera>
+                    </wm-container>
+                    <wm-container horizontalalign="center" name="container6" marginbottom="10" margintop="10">
+                        <wm-picture picturesource="bind:Widgets.camera1.datavalue" name="picture1"></wm-picture>
+                    </wm-container>
+                </wm-segment-content>
+                <wm-segment-content name="segment_content2" caption="Video">
+                    <wm-container horizontalalign="center" name="container7" marginbottom="10" margintop="10">
+                        <wm-camera capturetype="VIDEO" name="camera2"></wm-camera>
+                    </wm-container>
+                    <wm-container horizontalalign="center" name="container8" marginbottom="10" margintop="10">
+                        <wm-video mp4format="bind:Widgets.camera2.datavalue" name="video1" controls="controls" videopreload="none"></wm-video>
+                    </wm-container>
+                </wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar dataset="home,music,edit" name="mobile_tabbar1"></wm-mobile-tabbar>
+</wm-page>

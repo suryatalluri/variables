@@ -1,0 +1,60 @@
+<wm-page name="page1" data-ng-controller="Device_VariablesPageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar title="Device Variable" name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-segmented-control name="segmented_control1">
+                <wm-segment-content name="segment_content1" caption="AppInfo">
+                    <wm-livelist name="livelist2" navigation="None" dataset="bind:Variables.appInfo.dataSet" listclass="list-group" itemsperrow="1" template="true">
+                        <wm-listtemplate name="listtemplate2" layout="media">
+                            <wm-card name="Article Card">
+                                <wm-card-content name="card_content2">
+                                    <wm-label class="card-title" caption="bind:Variables.appInfo.dataSet.appversion" name="Title"></wm-label>
+                                    <wm-label name="Description" class="card-text" caption="bind:Variables.appInfo.dataSet.cordovaversion"></wm-label>
+                                </wm-card-content>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-segment-content>
+                <wm-segment-content name="segment_content2" caption="DeviceInfo">
+                    <wm-livelist name="livelist4" navigation="None" dataset="bind:Variables.deviceInfo.dataSet" listclass="list-group" itemsperrow="1" template="true">
+                        <wm-listtemplate name="listtemplate4" layout="media">
+                            <wm-card name="Article Card">
+                                <wm-card-content name="card_content4">
+                                    <wm-label class="card-title" caption="bind:Variables.deviceInfo.dataSet.connectionType" name="Title"></wm-label>
+                                    <wm-label name="Description" class="card-text" caption="bind:Variables.deviceInfo.dataSet.deviceModel"></wm-label>
+                                    <wm-container margintop="5" marginbottom="5" name="container1">
+                                        <wm-label caption="bind:Variables.deviceInfo.dataSet.deviceUUID" name="label5"></wm-label>
+                                    </wm-container>
+                                    <wm-container name="container2" margintop="5" marginbottom="5">
+                                        <wm-label caption="bind:Variables.deviceInfo.dataSet.os" name="label7"></wm-label>
+                                    </wm-container>
+                                    <wm-container name="container3" margintop="5" marginbottom="5">
+                                        <wm-label caption="bind:Variables.deviceInfo.dataSet.osVersion" name="label8"></wm-label>
+                                    </wm-container>
+                                </wm-card-content>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-segment-content>
+                <wm-segment-content name="segment_content3" caption="Location">
+                    <wm-prefab prefabname="googlemaps" name="googlemaps2" locations="bind:Variables.Location.dataSet" lat="coords.latitude" lng="coords.longitude"></wm-prefab>
+                </wm-segment-content>
+                <wm-segment-content name="segment_content4" caption="NetworkInfo">
+                    <wm-livelist name="livelist3" navigation="None" dataset="bind:Variables.NetworkInfo.dataSet" listclass="list-group" itemsperrow="1" template="true">
+                        <wm-listtemplate name="listtemplate3" layout="media">
+                            <wm-card name="Article Card">
+                                <wm-card-content name="card_content3">
+                                    <wm-label class="card-title" caption="bind:Variables.NetworkInfo.dataSet.connectionType" name="Title"></wm-label>
+                                    <wm-label name="Description" class="card-text" caption="bind:Variables.NetworkInfo.dataSet.isOnline"></wm-label>
+                                    <wm-label caption="bind:Variables.NetworkInfo.dataSet.isOffline" name="label11"></wm-label>
+                                </wm-card-content>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

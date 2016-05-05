@@ -1,0 +1,46 @@
+<project name="ProjectBuildHelper" basedir=".">
+    <description>
+        Project Build Helper
+    </description>
+    <property name="webInf" location="src/main/webapp/WEB-INF" />
+    <property name="targetServices" location="target/services" />
+
+    <target name="copy-libs-jar">
+        <mkdir dir="${webInf}/lib"/>
+        <echo>Copying jars from ${basedir}/lib to ${webInf}/lib</echo>
+        <copy todir="${webInf}/lib" overwrite="true">
+            <fileset dir="lib">
+                <exclude name="Readme.txt" />
+            </fileset>
+        </copy>
+    </target>
+    <target name="copy-services">
+        <mkdir dir="${targetServices}"/>
+        <echo>Copying src folders from each folder in ${basedir}/services to ${targetServices}</echo>
+        <copy todir="${targetServices}/src" overwrite="true" failonerror="false" includeEmptyDirs="false">
+            <fileset dir="services" >
+                <include name="**/*.java"/>
+            </fileset>
+            <chainedmapper>
+                <cutdirsmapper dirs="1"/>
+                <globmapper from="src${file.separator}*" to="*" />
+            </chainedmapper>
+        </copy>
+        <copy todir="${targetServices}/resources" overwrite="true" failonerror="false" includeEmptyDirs="false">
+            <fileset dir="services" >
+                <exclude name="**/*.java"/>
+            </fileset>
+            <chainedmapper>
+                <cutdirsmapper dirs="1"/>
+                <globmapper from="src${file.separator}*" to="*" />
+            </chainedmapper>
+        </copy>
+    </target>
+    <target name="copy-wm-project-properties">
+        <mkdir dir="target/classes"/>
+        <echo>Copying .wmproject.properties file to target/classes(classpath)</echo>
+        <copy file=".wmproject.properties" todir="target/classes" overwrite="true" failonerror="false"/>
+    </target>
+
+    <target name="init" depends="copy-libs-jar,copy-services,copy-wm-project-properties"></target>
+</project>

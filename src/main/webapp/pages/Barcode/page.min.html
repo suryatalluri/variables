@@ -1,0 +1,55 @@
+<style id="Barcode.css">
+
+</style>
+<script id="Barcode.js">
+Application.$controller("BarcodePageController", ["$scope", function ($scope) {
+    "use strict";
+
+    /* perform any action on widgets/variables within this block */
+    $scope.onPageReady = function () {
+        /*
+         * variables can be accessed through '$scope.Variables' property here
+         * e.g. to get dataSet in a staticVariable named 'loggedInUser' use following script
+         * $scope.Variables.loggedInUser.getData()
+         *
+         * widgets can be accessed through '$scope.Widgets' property here
+         * e.g. to get value of text widget named 'username' use following script
+         * '$scope.Widgets.username.datavalue'
+         */
+    };
+
+}]);
+
+</script>
+<script id="Barcode.variables.json">
+var _BarcodePage_Variables_ ={ }
+</script>
+<script id="Barcode.html" type="text/ng-template">
+<wm-page name="page1" data-ng-controller="BarcodePageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar title="Barcode" name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-segmented-control name="segmented_control1">
+                <wm-segment-content name="segment_content1" caption="Widget">
+                    <wm-container horizontalalign="center" marginbottom="10" margintop="10" name="container1">
+                        <wm-barcodescanner name="barcodescanner1"></wm-barcodescanner>
+                    </wm-container>
+                    <wm-container name="container2" horizontalalign="center" marginbottom="10" margintop="10">
+                        <wm-label caption="bind:Widgets.barcodescanner1.datavalue" name="label1"></wm-label>
+                    </wm-container>
+                </wm-segment-content>
+                <wm-segment-content name="segment_content2" caption="Variable">
+                    <wm-container name="container3" horizontalalign="center" marginbottom="10" margintop="10">
+                        <wm-button on-tap="ScanBarcode" name="button1" class="btn-default" caption="Button" type="button"></wm-button>
+                    </wm-container>
+                    <wm-container name="container4" horizontalalign="center" marginbottom="10" margintop="10">
+                        <wm-label caption="bind:Variables.ScanBarcode.dataSet.text" name="label2"></wm-label>
+                    </wm-container>
+                </wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>
+</script>

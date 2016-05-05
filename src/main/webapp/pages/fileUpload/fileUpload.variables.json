@@ -1,0 +1,63 @@
+{
+  "ErrorAlert" : {
+    "_id" : "wm-ErrorAlert-wm.NotificationVariable-1460703580074",
+    "name" : "ErrorAlert",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "text",
+      "value" : "Upload failed",
+      "type" : "string"
+    }, {
+      "target" : "okButtonText",
+      "value" : "OK",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "error",
+      "type" : "list"
+    } ],
+    "operation" : "alert"
+  },
+  "fileUpload" : {
+    "_id" : "wm-fileUpload-wm.DeviceVariable-1460703474959",
+    "name" : "fileUpload",
+    "owner" : "Page",
+    "category" : "wm.DeviceVariable",
+    "dataBinding" : [ {
+      "target" : "localFile",
+      "value" : "bind:Widgets.camera1.datavalue",
+      "type" : "string"
+    } ],
+    "service" : "file",
+    "operation" : "upload",
+    "dataSet" : {
+      "name" : "",
+      "path" : "",
+      "size" : 0,
+      "type" : ""
+    },
+    "onSuccess" : "SuccessAlert",
+    "onError" : "ErrorAlert"
+  },
+  "SuccessAlert" : {
+    "_id" : "wm-SuccessAlert-wm.NotificationVariable-1460703580074",
+    "name" : "SuccessAlert",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "text",
+      "value" : "Uploaded Successfully",
+      "type" : "string"
+    }, {
+      "target" : "okButtonText",
+      "value" : "OK",
+      "type" : "string"
+    }, {
+      "target" : "alerttype",
+      "value" : "success",
+      "type" : "list"
+    } ],
+    "operation" : "alert"
+  }
+}

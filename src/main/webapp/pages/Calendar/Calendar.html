@@ -1,0 +1,28 @@
+<wm-page name="page1" data-ng-controller="CalendarPageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar title="Calendar" name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-livelist name="livelist1" navigation="None" dataset="bind:Variables.getEvents.dataSet" listclass="list-group" itemsperrow="1" template="true">
+                <wm-listtemplate name="listtemplate1" layout="media">
+                    <wm-card name="Article Card">
+                        <wm-card-content name="card_content1">
+                            <wm-label class="card-title" caption="bind:Variables.getEvents.dataSet.title" name="Title"></wm-label>
+                            <wm-label name="Description" class="card-text" caption="bind:Variables.getEvents.dataSet.message"></wm-label>
+                            <wm-container margintop="5" marginbottom="5" name="container1">
+                                <wm-label caption="bind:Variables.getEvents.dataSet[$i].startDate" name="label3"></wm-label>
+                            </wm-container>
+                            <wm-container name="container2" margintop="5" marginbottom="5">
+                                <wm-label caption="bind:Variables.getEvents.dataSet[$i].endDate" name="label4"></wm-label>
+                            </wm-container>
+                            <wm-container name="container3" margintop="5" marginbottom="5">
+                                <wm-label caption="bind:Variables.getEvents.dataSet[$i].location" name="label5"></wm-label>
+                            </wm-container>
+                        </wm-card-content>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

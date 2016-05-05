@@ -1,0 +1,21 @@
+<wm-page data-ng-controller="LoginPageController" name="page1">
+  <wm-mobile-navbar title="Login" backbutton="false"></wm-mobile-navbar>
+  <wm-content name="content1">
+    <wm-page-content columnwidth="12">
+      <wm-login name="loginForm" data-ng-controller="loginFormController" on-submit="loginVariable">
+        <wm-composite name="userNameField">
+          <wm-label caption="Username" name="userNameLabel" class="control-label"></wm-label>
+          <wm-text placeholder="Enter username" name="usernametext" class="app-login-username" width="100%" autocomplete="off" autocorrect="off" autocapitalize="off" updateon="default"></wm-text>
+        </wm-composite>
+        <wm-composite name="passwordField">
+          <wm-label caption="Password" name="passwordLabel" class="control-label"></wm-label>
+          <wm-text type="password" name="passwordtext" placeholder="Enter password" class="app-login-password" width="100%" autocomplete="off" autocorrect="off" autocapitalize="off" updateon="default"></wm-text>
+        </wm-composite>
+        <wm-button type="submit" caption="Sign in" width="100%" class="app-login-button btn-primary" name="loginButton"></wm-button>
+        <wm-composite name="remembermeField" class="app-login-rememberme">
+          <wm-checkbox caption="Remember Me" name="remembermecheck"></wm-checkbox>
+        </wm-composite>
+      </wm-login>
+    </wm-page-content>
+  </wm-content>
+</wm-page>

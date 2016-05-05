@@ -1,0 +1,137 @@
+{
+  "group": "location",
+  "templateUrl": "/pages/Main/Main.html",
+  "controllerUrl": "/pages/Main/Main.js",
+  "variablesUrl": "/pages/Main/Main.variables.json",
+  "iconUrl": "/resources/images/imagelists/prefab-icon.png",
+  "resources": {
+    "styles": [
+      "/pages/Main/Main.css"
+    ],
+    "scripts": [
+      "https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"
+    ],
+    "modules": [
+      {
+        "name": "ngMap",
+        "files": [
+          "/resources/js/ng-map.min.js"
+        ]
+      }
+    ]
+  },
+  "properties": {
+    "locations": {
+      "bindable": "in-bound",
+      "type": "array,object",
+      "widget": "string"
+    },
+    "markertype": {
+      "type": "list",
+      "value": "LatLng",
+      "options": [
+        "Address",
+        "LatLng"
+      ]
+    },
+    "address": {
+      "type": "string",
+      "options": [],
+      "widget": "list-picker",
+      "show": false
+    },
+    "lat": {
+      "type": "list",
+      "show": false
+    },
+    "lng": {
+      "type": "list",
+      "show": false
+    },
+    "icon": {
+      "type": "list"
+    },
+    "info": {
+      "type": "list"
+    },
+    "shade": {
+      "type": "list"
+    },
+    "radius": {
+      "type": "list"
+    },
+    "origin": {
+      "bindable": "in-out-bound",
+      "type": "string"
+    },
+    "destination": {
+      "bindable": "in-out-bound",
+      "type": "string"
+    },
+    "waypoints": {
+      "bindable": "in-bound",
+      "type": "array,object",
+      "widget": "string"
+    },
+    "stopover": {
+      "type": "boolean",
+      "value": false,
+      "show": false
+    },
+    "travelmode": {
+      "type": "list",
+      "value": "DRIVING",
+      "options": [
+        "WALKING",
+        "DRIVING",
+        "TRANSIT"
+      ]
+    },
+    "height": {
+      "type": "string",
+      "value": "400px"
+    },
+    "zoom": {
+      "type": "number",
+      "value": 5
+    },
+    "perimeter": {
+      "type": "boolean",
+      "value": true
+    },
+    "trafficlayer": {
+      "type": "boolean",
+      "value": false
+    },
+    "refresh": {
+      "type": "method",
+      "method": "refresh"
+    },
+    "markaddress": {
+      "type": "method",
+      "method": "markaddress"
+    },
+    "marklatlng": {
+      "type": "method",
+      "method": "marklatlng"
+    },
+    "removemarker": {
+      "type": "method",
+      "method": "removemarker"
+    },
+    "clearMarkers": {
+      "type": "method",
+      "method": "clearMarkers"
+    },
+    "distance": {
+      "type": "string",
+      "bindable": "out-bound",
+      "show": false
+    },
+    "duration": {
+      "type": "string",
+      "bindable": "out-bound",
+      "show": false
+    }
+  }
+}

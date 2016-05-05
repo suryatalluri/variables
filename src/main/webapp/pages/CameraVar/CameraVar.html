@@ -1,0 +1,33 @@
+<wm-page name="page1" data-ng-controller="CameraVarPageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar title="Camera Variable" name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1">
+                    <wm-tabheader heading="Image" name="tabheader1"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-container name="container3" horizontalalign="center" marginbottom="10" margintop="10">
+                            <wm-button on-tap="CaptureImage" name="button1" class="btn-default" caption="Button" type="button"></wm-button>
+                        </wm-container>
+                        <wm-container name="container4" horizontalalign="center" marginbottom="10" margintop="10">
+                            <wm-picture picturesource="bind:Variables.CaptureImage.dataSet.imagePath" name="picture1"></wm-picture>
+                        </wm-container>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2">
+                    <wm-tabheader heading="Video" name="tabheader2"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent2">
+                        <wm-container horizontalalign="center" marginbottom="10" margintop="10" name="container1">
+                            <wm-button on-tap="CaptureVideo" name="button2" class="btn-default" caption="Button" type="button"></wm-button>
+                        </wm-container>
+                        <wm-container name="container2" horizontalalign="center" marginbottom="10" margintop="10">
+                            <wm-video mp4format="bind:Variables.CaptureVideo.dataSet.videoPath" name="video1" controls="controls" videopreload="none"></wm-video>
+                        </wm-container>
+                    </wm-tabcontent>
+                </wm-tabpane>
+            </wm-tabs>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

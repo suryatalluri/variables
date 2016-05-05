@@ -1,0 +1,29 @@
+<wm-page name="page1" data-ng-controller="ContactsPageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar title="Contacts" name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-livelist name="livelist1" navigation="None" dataset="bind:Variables.Contacts.dataSet" listclass="list-group" itemsperrow="1" template="true">
+                <wm-listtemplate name="listtemplate1" layout="media">
+                    <wm-card name="Article Card">
+                        <wm-card-content name="card_content1">
+                            <wm-label class="card-title" caption="bind:Variables.Contacts.dataSet[0].displayName" name="Title"></wm-label>
+                            <wm-label caption="bind:Variables.Contacts.dataSet[0].phoneNumbers[0].value" name="label3"></wm-label>
+                        </wm-card-content>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-livelist>
+            <wm-livelist name="livelist2" navigation="None" dataset="bind:Variables.Contacts.dataSet" listclass="list-group" itemsperrow="1" template="true">
+                <wm-listtemplate name="listtemplate2" layout="media">
+                    <wm-card name="Article Card">
+                        <wm-card-content name="card_content2">
+                            <wm-label class="card-title" caption="bind:Variables.Contacts.dataSet.displayName" name="Title"></wm-label>
+                            <wm-label name="Description" class="card-text" caption="bind:Variables.Contacts.dataSet['phoneNumbers[0].value']"></wm-label>
+                        </wm-card-content>
+                    </wm-card>
+                </wm-listtemplate>
+            </wm-livelist>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+</wm-page>

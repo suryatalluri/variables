@@ -1,0 +1,10 @@
+{
+  "notificationVariable1" : {
+    "_id" : "wm-notificationVariable1-wm.NotificationVariable-1460726435228",
+    "name" : "notificationVariable1",
+    "owner" : "Page",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ ],
+    "operation" : "alert"
+  }
+}

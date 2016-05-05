@@ -1,0 +1,51 @@
+<wm-page name="page1" data-ng-controller="fileUploadPageController">
+    <wm-left-panel name="left_panel1" content="leftnav"></wm-left-panel>
+    <wm-mobile-navbar name="mobile_navbar1"></wm-mobile-navbar>
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12">
+            <wm-segmented-control name="segmented_control1">
+                <wm-segment-content name="segment_content1" caption="Widget">
+                    <wm-container margintop="5" marginbottom="5" name="container1">
+                        <wm-fileupload operation="uploadFile" service="FileService" contenttype="image" name="fileupload1"></wm-fileupload>
+                    </wm-container>
+                    <wm-container name="container2" margintop="5" marginbottom="5">
+                        <wm-button on-tap="FileServiceListFiles" name="button1" class="btn-default" caption="Button" type="button"></wm-button>
+                    </wm-container>
+                    <wm-livelist name="livelist1" navigation="None" dataset="bind:Variables.FileServiceListFiles.dataSet" listclass="list-group" itemsperrow="1" template="true">
+                        <wm-listtemplate name="listtemplate1" layout="media">
+                            <wm-card name="Article Card" picturesource="bind:Variables.FileServiceListFiles.dataSet.path">
+                                <wm-card-content name="card_content1">
+                                    <wm-label class="card-title" caption="bind:Variables.FileServiceListFiles.dataSet.name" name="Title"></wm-label>
+                                    <wm-label name="Description" class="card-text" caption="bind:Variables.FileServiceListFiles.dataSet.type"></wm-label>
+                                </wm-card-content>
+                            </wm-card>
+                        </wm-listtemplate>
+                    </wm-livelist>
+                </wm-segment-content>
+                <wm-segment-content name="segment_content2" caption="Variable">
+                    <wm-container horizontalalign="center" name="container3" margintop="5" marginbottom="5">
+                        <wm-camera on-success="fileUpload" name="camera1"></wm-camera>
+                    </wm-container>
+                    <wm-container backgroundcolor="skyblue" horizontalalign="center" name="container5" margintop="5" marginbottom="5">
+                        <wm-label backgroundcolor="skyblue" color="white" caption="Uploading" name="label3"></wm-label>
+                    </wm-container>
+                    <wm-container backgroundcolor="green" horizontalalign="center" name="container6" margintop="5" marginbottom="5">
+                        <wm-label color="white" caption="Success" name="label4"></wm-label>
+                    </wm-container>
+                    <wm-container backgroundcolor="Red" horizontalalign="center" name="container7" margintop="5" marginbottom="5">
+                        <wm-label caption="Failed" color="white" name="label5"></wm-label>
+                    </wm-container>
+                </wm-segment-content>
+            </wm-segmented-control>
+        </wm-page-content>
+    </wm-content>
+    <wm-mobile-tabbar name="mobile_tabbar1" dataset="home,star,music"></wm-mobile-tabbar>
+    <wm-view name="view1" class="dialog-view">
+        <wm-alertdialog on-close="variableOnClose()" on-ok="variableOnOk()" alerttype="{{notification.alerttype}}" oktext="{{notification.okButtonText}}" title="alert" message="{{notification.text}}" notificationdialog="alert" controller="NotificationDialogController"
+        name="notificationalertdialog"></wm-alertdialog>
+    </wm-view>
+    <wm-view name="view2" class="dialog-view">
+        <wm-alertdialog on-close="variableOnClose()" on-ok="variableOnOk()" alerttype="{{notification.alerttype}}" oktext="{{notification.okButtonText}}" title="alert" message="{{notification.text}}" notificationdialog="alert" controller="NotificationDialogController"
+        name="notificationalertdialog"></wm-alertdialog>
+    </wm-view>
+</wm-page>

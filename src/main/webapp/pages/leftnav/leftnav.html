@@ -1,0 +1,33 @@
+<wm-partial data-ng-controller="leftnavPageController" name="leftnav" type="left-panel">
+    <wm-nav type="pills" layout="stacked" name="nav1">
+        <wm-nav-item name="nav_item1">
+            <wm-anchor on-tap="goToPage_Main" caption="Camera Widget" iconclass="wi wi-plus" class="active" name="anchor1"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item2">
+            <wm-anchor on-tap="goToPage_CameraVar" caption="Camera variable" iconclass="wi wi-bookmark" name="anchor2"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item3">
+            <wm-anchor on-tap="goToPage_Barcode" caption="Barcode" iconclass="wi wi-bookmark" name="anchor3"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+    <wm-nav type="pills" layout="stacked" name="nav2">
+        <wm-nav-item name="nav_item4">
+            <wm-anchor on-tap="goToPage_Device_Variables" caption="Device-Variable" name="anchor4" badgevalue="4"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item5">
+            <wm-anchor on-tap="goToPage_Contacts" caption="Contacts" name="anchor5"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item6">
+            <wm-anchor on-tap="goToPage_Calendar" caption="Calendar" name="anchor6"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item7">
+            <wm-anchor on-tap="goToPage_fileUpload" caption="File Upload" iconclass="wi wi-file" name="anchor7"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item8">
+            <wm-anchor iconclass="wi wi-file" name="anchor8"></wm-anchor>
+        </wm-nav-item>
+        <wm-nav-item name="nav_item9">
+            <wm-anchor iconclass="wi wi-file" name="anchor9"></wm-anchor>
+        </wm-nav-item>
+    </wm-nav>
+</wm-partial>

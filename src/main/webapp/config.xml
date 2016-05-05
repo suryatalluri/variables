@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.variables" version="0.0.3">
+    <name>variables</name>
+    <description></description>
+    <author email="surya.talluri+6@wavemaker.com" href="www.wavemaker.com">Mani</author>
+    <content src="index.html"/>
+    <access origin="https://dev-studio.wavemakeronline.com/run-75yfr897sl/variables/*"/>
+    <access origin="http://*/*"/>
+    <access origin="https://*/*"/>
+    <access origin="https://stage-studio.wavemakeronline.com/run-c7w51c87gd/variables/*"/>
+    <access origin="https://www.wavemakeronline.com/run-prvq0vg5fw/variables/*"/>
+    <plugin name="cordova-plugin-device" spec="1.1.1"/>
+    <plugin name="cordova-plugin-contacts" spec="2.0.1"/>
+    <plugin name="cordova-plugin-whitelist" spec="1.2.1"/>
+    <plugin name="cordova-plugin-file" spec="4.1.0"/>
+    <plugin name="cordova-plugin-media-capture" spec="1.2.0"/>
+    <plugin name="cordova-plugin-splashscreen" spec="3.1.0"/>
+    <plugin name="cordova-plugin-camera" spec="2.1.0"/>
+    <plugin name="cordova-plugin-app-version" spec="0.1.8"/>
+    <plugin name="cordova-plugin-network-information" spec="1.2.0"/>
+    <plugin name="phonegap-plugin-barcodescanner" spec="4.1.0"/>
+    <plugin name="cordova-plugin-imagepicker" spec="1.3.0"/>
+    <plugin name="cordova-plugin-geolocation" spec="2.1.0"/>
+    <plugin name="cordova-plugin-file-transfer" spec="1.5.0"/>
+    <plugin name="cordova-plugin-statusbar" spec="2.1.1"/>
+    <plugin name="cordova-plugin-calendar" spec="4.4.7"/>
+    <plugin name="cordova-plugin-datepicker" spec="0.9.3"/>
+    <plugin name="cordova-plugin-inappbrowser" spec="1.3.0"/>
+    <plugin name="cordova-plugin-mediapicker" spec="0.0.1"/>
+    <allow-intent href="https://maps.googleapis.com/*"/>
+    <allow-intent href="https://maps.google.com/maps/*"/>
+    <allow-intent href="https://maps.gstatic.com"/>
+    <allow-intent href="https://mts.googleapis.com/*"/>
+    <allow-intent href="https://csi.gstatic.com/*"/>
+    <allow-intent href="https://*/*"/>
+    <allow-intent href="http://*/*"/>
+    <platform name="android">
+        <splash density="land-ldpi" qualifier="land-ldpi" height="0" src="resources/assets/android/splashes/drawable_land_ldpi/splash.png" width="0"/>
+        <splash density="land-mdpi" qualifier="land-mdpi" height="0" src="resources/assets/android/splashes/drawable_land_mdpi/splash.png" width="0"/>
+        <splash density="land-hdpi" qualifier="land-hdpi" height="0" src="resources/assets/android/splashes/drawable_land_hdpi/splash.png" width="0"/>
+        <splash density="land-xhdpi" qualifier="land-xhdpi" height="0" src="resources/assets/android/splashes/drawable_land_xhdpi/splash.png" width="0"/>
+        <splash density="land-xxhdpi" qualifier="land-xxhdpi" height="0" src="resources/assets/android/splashes/drawable_land_xxhdpi/splash.png" width="0"/>
+        <splash density="port-ldpi" qualifier="ldpi" height="0" src="resources/assets/android/splashes/drawable_ldpi/splash.png" width="0"/>
+        <splash density="port-mdpi" qualifier="mdpi" height="0" src="resources/assets/android/splashes/drawable_mdpi/splash.png" width="0"/>
+        <splash density="port-hdpi" qualifier="hdpi" height="0" src="resources/assets/android/splashes/drawable_hdpi/splash.png" width="0"/>
+        <splash density="port-xhdpi" qualifier="xhdpi" height="0" src="resources/assets/android/splashes/drawable_xhdpi/splash.png" width="0"/>
+        <splash density="port-xxhdpi" qualifier="xxhdpi" height="0" src="resources/assets/android/splashes/drawable_xxhdpi/splash.png" width="0"/>
+        <icon density="ldpi" height="0" src="resources/assets/android/icons/icon-ldpi.png" width="0"/>
+        <icon density="mdpi" height="0" src="resources/assets/android/icons/icon-mdpi.png" width="0"/>
+        <icon density="hdpi" height="0" src="resources/assets/android/icons/icon-hdpi.png" width="0"/>
+        <icon density="xhdpi" height="0" src="resources/assets/android/icons/icon-xhdpi.png" width="0"/>
+        <icon density="xhdpi" height="0" src="resources/assets/android/icons/icon-default.png" width="0"/>
+        <icon density="xxhdpi" height="0" src="resources/assets/android/icons/icon-xxhdpi.png" width="0"/>
+        <preference name="orientation" value="default"/>
+        <preference name="android-minSdkVersion" value="19"/>
+        <preference name="SplashScreenDelay" value="25000"/>
+    </platform>
+    <platform name="ios">
+        <splash height="1004" src="resources/assets/ios/splashes/default.png" width="768"/>
+        <splash height="960" src="resources/assets/ios/splashes/default@2x_iphone_640x960.png" width="640"/>
+        <splash height="1136" src="resources/assets/ios/splashes/default_568h@2x_iphone_640x1136.png" width="640"/>
+        <splash height="750" src="resources/assets/ios/splashes/default_750@2x_iphone6_landscape_1334x750.png" width="1334"/>
+        <splash height="1334" src="resources/assets/ios/splashes/default_750@2x_iphone6_portrait_750x1334.png" width="750"/>
+        <splash height="1242" src="resources/assets/ios/splashes/default_1242@3x_iphone6s_landscape_2208x1242.png" width="2208"/>
+        <splash height="2208" src="resources/assets/ios/splashes/default_1242@3x_iphone6s_portrait_1242x2208.png" width="1242"/>
+        <splash height="1496" src="resources/assets/ios/splashes/default_Landscape@2x_ipad_2048x1496.png" width="2048"/>
+        <splash height="1536" src="resources/assets/ios/splashes/default_Landscape@2x_ipad_2048x1536.png" width="2048"/>
+        <splash height="748" src="resources/assets/ios/splashes/default_Landscape_ipad_1024x748.png" width="1024"/>
+        <splash height="768" src="resources/assets/ios/splashes/default_Landscape_ipad_1024x768.png" width="1024"/>
+        <splash height="2008" src="resources/assets/ios/splashes/default_Portrait@2x_ipad_1536x2008.png" width="1536"/>
+        <splash height="2048" src="resources/assets/ios/splashes/default_Portrait@2x_ipad_1536x2048.png" width="1536"/>
+        <splash height="1024" src="resources/assets/ios/splashes/default_Portrait_ipad_768x1024.png" width="768"/>
+        <splash height="2008" src="resources/assets/ios/splashes/default_ipad.png" width="1536"/>
+        <splash height="480" src="resources/assets/ios/splashes/default_iphone.png" width="320"/>
+        <icon height="57" src="resources/assets/ios/icons/icon.png" width="57"/>
+        <icon height="114" src="resources/assets/ios/icons/icon@2x.png" width="114"/>
+        <icon height="29" src="resources/assets/ios/icons/icon-29.png" width="29"/>
+        <icon height="40" src="resources/assets/ios/icons/icon-40.png" width="40"/>
+        <icon height="80" src="resources/assets/ios/icons/icon-40@2x.png" width="80"/>
+        <icon height="50" src="resources/assets/ios/icons/icon-50.png" width="50"/>
+        <icon height="58" src="resources/assets/ios/icons/icon-58.png" width="58"/>
+        <icon height="60" src="resources/assets/ios/icons/icon-60.png" width="60"/>
+        <icon height="72" src="resources/assets/ios/icons/icon-72.png" width="72"/>
+        <icon height="144" src="resources/assets/ios/icons/icon-72@2x.png" width="144"/>
+        <icon height="76" src="resources/assets/ios/icons/icon-76.png" width="76"/>
+        <icon height="80" src="resources/assets/ios/icons/icon-80.png" width="80"/>
+        <icon height="100" src="resources/assets/ios/icons/icon-100.png" width="100"/>
+        <icon height="120" src="resources/assets/ios/icons/icon-60@2x.png" width="120"/>
+        <icon height="152" src="resources/assets/ios/icons/icon-76@2x.png" width="152"/>
+        <icon height="180" src="resources/assets/ios/icons/icon-60@3x.png" width="180"/>
+        <preference name="orientation" value="all"/>
+        <preference name="deployment-target" value="8.0"/>
+        <preference name="StatusBarStyle" value="lightcontent"/>
+        <preference name="StatusBarOverlaysWebView" value="false"/>
+        <preference name="StatusBarBackgroundColor" value="#000000"/>
+        <preference name="SplashScreenDelay" value="4000"/>
+    </platform>
+    <preference name="fullScreen" value="true"/>
+    <preference name="prerendered-icon" value="false"/>
+    <preference name="ios-statusbarstyle" value="default"/>
+    <preference name="AutoHideSplashScreen" value="false"/>
+    <preference name="SplashMaintainAspectRatio" value="true"/>
+    <preference name="DisallowOverscroll" value="true"/>
+    <preference name="android-build-tool" value="gradle"/>
+    <preference name="ShowSplashScreenSpinner" value="false"/>
+    <preference name="windowSoftInputMode" value="stateVisible"/>
+</widget>

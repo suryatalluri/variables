@@ -1,0 +1,9 @@
+<wm-page name="page1" data-ng-controller="PagePageController">
+    <wm-content name="content1">
+        <wm-page-content name="page_content1" columnwidth="12"></wm-page-content>
+    </wm-content>
+    <wm-view name="view1" class="dialog-view">
+        <wm-alertdialog on-close="variableOnClose()" on-ok="variableOnOk()" alerttype="{{notification.alerttype}}" oktext="{{notification.okButtonText}}" title="alert" message="{{notification.text}}" notificationdialog="alert" controller="NotificationDialogController"
+        name="notificationalertdialog"></wm-alertdialog>
+    </wm-view>
+</wm-page>
