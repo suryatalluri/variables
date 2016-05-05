@@ -294,6 +294,61 @@
     } ],
     "startUpdate" : true
   },
+  "GoogleapisInvoke" : {
+    "_id" : "wm-GoogleapisInvoke-wm.ServiceVariable-1462454654787",
+    "name" : "GoogleapisInvoke",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "origin",
+      "value" : "Toronto",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "destination",
+      "value" : "Montreal",
+      "type" : "java.lang.String"
+    }, {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "java.lang.String"
+    } ],
+    "type" : "googleapis.DirectionsResponse",
+    "service" : "googleapis",
+    "operation" : "invoke",
+    "serviceType" : "RestService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/googleapis/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "consumes" : [ "text/xml" ],
+      "parameters" : [ {
+        "name" : "sensor",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "origin",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "destination",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true
+  },
   "goToPage_Barcode" : {
     "_id" : "wm-goToPage_Barcode-wm.NavigationVariable-1460701785134",
     "name" : "goToPage_Barcode",

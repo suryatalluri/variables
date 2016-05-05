@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="googleapis" type="RestService" springFile="googleapis.spring.xml">
+    <operation name="invoke">
+        <parameter name="sensor" typeRef="java.lang.String" isList="false"/>
+        <parameter name="origin" typeRef="java.lang.String" isList="false"/>
+        <parameter name="destination" typeRef="java.lang.String" isList="false"/>
+        <return typeRef="googleapis.DirectionsResponse" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="googleapis.geocoded_waypointEntryItem" name="geocoded_waypointEntryItem" supportsQuickData="false">
+            <element name="place_id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="geocoder_status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="type" typeRef="java.lang.String" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.overview_polyline" name="overview_polyline" supportsQuickData="false">
+            <element name="points" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.route" name="route" supportsQuickData="false">
+            <element name="bounds" typeRef="googleapis.bounds" isList="false" allowNull="false"/>
+            <element name="summary" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="leg" typeRef="googleapis.leg" isList="false" allowNull="false"/>
+            <element name="copyrights" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="overview_polyline" typeRef="googleapis.overview_polyline" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.northeast" name="northeast" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.start_location" name="start_location" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.DirectionsResponse" name="DirectionsResponse" supportsQuickData="false">
+            <element name="status" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="route" typeRef="googleapis.route" isList="false" allowNull="false"/>
+            <element name="geocoded_waypoint" typeRef="googleapis.geocoded_waypointEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.end_location" name="end_location" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.bounds" name="bounds" supportsQuickData="false">
+            <element name="southwest" typeRef="googleapis.southwest" isList="false" allowNull="false"/>
+            <element name="northeast" typeRef="googleapis.northeast" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.leg" name="leg" supportsQuickData="false">
+            <element name="distance" typeRef="googleapis.distance" isList="false" allowNull="false"/>
+            <element name="duration" typeRef="googleapis.duration" isList="false" allowNull="false"/>
+            <element name="end_location" typeRef="googleapis.end_location" isList="false" allowNull="false"/>
+            <element name="start_address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="end_address" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="start_location" typeRef="googleapis.start_location" isList="false" allowNull="false"/>
+            <element name="step" typeRef="googleapis.stepEntryItem" isList="true" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.polyline" name="polyline" supportsQuickData="false">
+            <element name="points" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.southwest" name="southwest" supportsQuickData="false">
+            <element name="lng" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+            <element name="lat" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.duration" name="duration" supportsQuickData="false">
+            <element name="text" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="value" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.stepEntryItem" name="stepEntryItem" supportsQuickData="false">
+            <element name="distance" typeRef="googleapis.distance" isList="false" allowNull="false"/>
+            <element name="html_instructions" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="duration" typeRef="googleapis.duration" isList="false" allowNull="false"/>
+            <element name="end_location" typeRef="googleapis.end_location" isList="false" allowNull="false"/>
+            <element name="polyline" typeRef="googleapis.polyline" isList="false" allowNull="false"/>
+            <element name="start_location" typeRef="googleapis.start_location" isList="false" allowNull="false"/>
+            <element name="maneuver" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="travel_mode" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="googleapis.distance" name="distance" supportsQuickData="false">
+            <element name="text" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="value" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>
